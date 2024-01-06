@@ -1,4 +1,5 @@
 import logging
+import os.path
 
 from tick.database.database_client import DatabaseError
 from tick.database.migration_service import MigrationService
@@ -20,6 +21,8 @@ class ProdApplication(StyledApplication):
     def exec(self, **kwargs) -> int:
         logging.basicConfig(level=logging.DEBUG)
         db_file_name = kwargs.get('db_file_name', './db/prod.sqlite')
+        if not os.path.exists('./db'):
+            os.mkdir('./db')
 
         try:
             with SqliteDatabase(db_file_name) as database:
