@@ -1,0 +1,9 @@
+[Icon Theme]
+Name=dark
+Comment=Dark theme icons
+Directories=svg
+
+[svg]
+Size=24
+Context=Applications
+Type=Scalable

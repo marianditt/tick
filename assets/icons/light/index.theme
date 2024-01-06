@@ -1,0 +1,9 @@
+[Icon Theme]
+Name=light
+Comment=Light theme icons
+Directories=svg
+
+[svg]
+Size=24
+Context=Applications
+Type=Scalable
